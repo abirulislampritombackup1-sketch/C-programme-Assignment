@@ -1,0 +1,20 @@
+In this programme I use %zu instead of %d for printing the size. 
+This is because when we are printing the sizeof() function it returns size_t not integer.
+The size mismatch (The biggest Danger)
+    - On our modern computers most of the os are 64 biggest
+    - but int (%d) is 32 bits 
+    - size_t (%zu) is 64 bits
+    -so if I am passing 64 bits of data and want to print in 32 bits that would give a error
+
+Signed vs Unsigned
+    - %d stands for Decimal Signed. It supports negative numbers (e.g., -5, -100).
+    -size_t is Unsigned. Physical size cannot be negative.
+
+Portability
+    - On an Arduino, it might be 16-bit.
+    
+    On an old PC, it might be 32-bit.
+    
+    On a supercomputer, it might be 64-bit.
+    
+    %zu automatically adjusts to match whatever computer your code is running on. %d assumes it's always a standard integer, which might break your code if you move it to a different machine.
