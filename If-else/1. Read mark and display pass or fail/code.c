@@ -1,0 +1,14 @@
+//read mark and display pass or fail.
+
+#include<stdio.h>
+int main () {
+    int mark;
+    printf("Enter any mark: ");
+    scanf("%d",&mark);
+    if ( mark>=40 ) {
+        printf("Pass");
+    } else {
+        printf("Fail");
+    }
+    return 0;
+}
